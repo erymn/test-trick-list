@@ -8,7 +8,7 @@ var firstNonRepeating = input.GroupBy(c => c)
     .Select(s => s.Key)
     .FirstOrDefault();
 
-Console.WriteLine($"First Non Repeating Character (Output) : {firstNonRepeating}");
+Console.WriteLine($"First Non Repeating Character (Output) : {(firstNonRepeating == null ? "_" : firstNonRepeating)}");
 
 Console.WriteLine("\nResult using For Loop");
 var countChar = new Dictionary<char, int>();
@@ -24,6 +24,6 @@ foreach(var c in input){
     if(countChar[c] == 1){
         Console.WriteLine($"First Non Repeating Character (Output using For Loop) : {c}");
         break;
-    }    
+    }
 }
 
