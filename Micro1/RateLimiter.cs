@@ -27,9 +27,10 @@ bool AllowRequest(string userId){
 
         Console.WriteLine($"Peek time: {peekTime}");
 
+        Console.WriteLine($"Queue Count: {queue.Count} && Peek Time: {peekTime > _span}");
         while(queue.Count > 0 && peekTime > _span){
             Console.WriteLine("Dequeue Process");
-            Console.WriteLine($"Queue Count: {queue.Count} && Peek Time: {peekTime > _span}");
+            // Console.WriteLine($"Queue Count: {queue.Count} && Peek Time: {peekTime > _span}");
             queue.Dequeue();
         }
         
